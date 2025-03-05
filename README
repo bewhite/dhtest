@@ -8,6 +8,7 @@ In order to create the database and seed with dummy data:
 In order to run the API in debug mode:
 (1) Open dhtest\backend\WebApi\WebApi.sln in Visual Studio.
 (2) Launch the http profile in the "Go" dropdown. (Docker is also possible but it was not possible to connect to the host DB in the Windows images that I tried. Perhaps Linux would be easier.)
+(3) API documentation can be found at http://localhost:5077/swagger/index.html
 
 In order to run the React frontend:
 (1) cd dhtest\frontend\product-editor
