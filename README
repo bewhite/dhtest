@@ -1,0 +1,25 @@
+Requirements: Node, Visual Studio and SQL Server installed locally
+
+In order to create the database and seed with dummy data:
+(1) cd dhtest\backend\WebApi
+(2) dotnet tool install --global dotnet-ef
+(3) dotnet ef database update
+
+In order to run the API in debug mode:
+(1) Open dhtest\backend\WebApi\WebApi.sln in Visual Studio.
+(2) Launch the http profile in the "Go" dropdown. (Docker is also possible but it was not possible to connect to the host DB in the Windows images that I tried. Perhaps Linux would be easier.)
+
+In order to run the React frontend:
+(1) cd dhtest\frontend\product-editor
+(2) npm i
+(3) npm run dev
+
+Defects to fix:
+(1) Formatting of fields (currency, dates).
+(2) .NET DateKinds and time zones probably not right.
+(3) Add update and delete functionality to the frontend and backend.
+(4) Limit the number of bar-chart divisions.
+(5) More intelligent validation of data using handlers for the validation framework already provided. In particular design an SKU format.
+(6) Authentication and authorisation using a cookie not a token.
+(7) Error handling on API calls, and resiliency measures generally.
+(8) Split out the migrations into a separate console application.
